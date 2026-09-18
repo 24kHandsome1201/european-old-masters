@@ -108,9 +108,28 @@ python3 scripts/build_site.py
 
 ## 部署
 
-推到一个仓库，然后在 GitHub Pages 或 Vercel 指向根目录即可，无需构建命令。
+线上地址：<https://24khandsome1201.github.io/european-old-masters/>
 
-`404.html` 在 GitHub Pages 上会自动生效。作品详情页通过查询参数寻址（`work.html?id=436535`），Vercel 不需要额外 rewrite。
+GitHub Pages 已配置为 `main` 分支根目录，无需构建命令。`404.html` 会自动生效。作品详情页通过查询参数寻址（`work.html?id=436535`），Vercel 不需要额外 rewrite。
+
+### 推送
+
+正常情况就是 `git push`。但如果 `github.com:443` 连不上（`git push` 报超时或 HTTP/2 错误），而 `api.github.com` 正常，可以用 Git Data API 推送：
+
+```bash
+python3 scripts/push_via_api.py --dry-run   # 先检查 tree 是否一致
+python3 scripts/push_via_api.py             # 推送当前 HEAD
+```
+
+这个脚本会用 REST API 复刻一次完整的 push，并且校验远端生成的 tree 与提交对象和本地逐字节一致，保证两边历史不会分叉。blob 缓存写在 `.git/dsh/`，中断后重跑可以续传。
+
+判断当前网络属于哪种情况：
+
+```bash
+curl -s -o /dev/null -w "%{http_code}\n" -m 10 https://github.com          # 000 表示不通
+curl -s -o /dev/null -w "%{http_code}\n" -m 10 https://api.github.com      # 200 表示可用
+```
+
 
 ---
 
