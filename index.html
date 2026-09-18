@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>古画 · 欧洲古典绘画导览</title>
+<meta name="description" content="一个非营利的欧洲古典绘画学习站：从乔托到塞尚，40 幅画作的高清图、中文导览与一条 1300—1900 年的时间线。图片全部来自博物馆 CC0 开放数据。">
+<meta name="color-scheme" content="light">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Archivo:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main-content">跳到主要内容</a>
+
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="brand" href="index.html">
+      <span class="brand__zh">古画</span>
+      <span class="brand__en">European Old Masters</span>
+    </a>
+    <nav class="site-nav" aria-label="主导航">
+      <a href="index.html" aria-current="page">目录</a>
+      <a href="about.html">版权与来源</a>
+    </nav>
+    <div class="source-toggle" data-source-toggle role="group" aria-label="图片加载方式">
+      <button type="button" data-mode="local" aria-pressed="true">本地图</button>
+      <button type="button" data-mode="remote" aria-pressed="false">馆方在线图</button>
+    </div>
+  </div>
+</header>
+
+<main id="main-content">
+
+  <!-- 主视觉：由 app.js 注入一幅镇馆之作 -->
+  <section class="hero" data-hero="435809" aria-label="本期主视觉"></section>
+
+  <section class="hero__intro">
+    <div class="wrap">
+      <p class="dropcap">欧洲古典绘画横跨六百年。它一开始几乎只为教堂和宫廷服务，画的是圣徒、君主和神话；到十九世纪末，画家已经在画火车站、洗衣妇和自己窗外的麦田。这条线索里，透视被发明出来，油画颜料被调得更亮，画家从行会工匠变成签名的作者，最后连"画什么才算画"这件事也被推翻了。</p>
+      <p>这里收录 <strong data-work-count>40</strong> 幅作品，按六个时代排成一条时间线。每幅都配了一段中文导览，说明它值得看的地方，以及它在绘画史里推了一下什么。所有图片来自纽约大都会艺术博物馆的开放数据，原作均属公有领域。</p>
+    </div>
+  </section>
+
+  <section class="timeline-section" aria-labelledby="timeline-title">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Timeline</span>
+        <h2 id="timeline-title">一条 1300—1900 的时间线</h2>
+        <p class="lede">每一个圆点是一幅画，颜色代表它所属的时代。点开即可进入导览，也可以点下方的时代名直接跳到对应目录。</p>
+      </div>
+      <div class="timeline" data-timeline tabindex="0" role="group" aria-label="作品时间线，可横向滚动"></div>
+    </div>
+  </section>
+
+  <section class="wrap" aria-labelledby="gallery-title">
+    <div class="section-head">
+      <span class="eyebrow">Catalogue</span>
+      <h2 id="gallery-title">作品目录</h2>
+      <p class="lede">按时代分组，可以筛选，也可以直接搜画家或画名。图片默认读取本地文件；若想对照馆方原图，切到页首的「馆方在线图」。</p>
+    </div>
+    <div data-gallery></div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="site-footer__grid">
+      <div>
+        <h2>关于本站</h2>
+        <p class="site-footer__note">一个个人非营利的欧洲古典绘画学习项目。不投放广告，不接受赞助，不销售任何商品或服务。站内画作的原作者均已去世数百年，作品本身属公有领域；数字图片来自博物馆以 CC0 方式发布的开放数据。若你认为本站内容侵犯了你的权利，请来信告知，我们会核实后及时删除。</p>
+      </div>
+      <div>
+        <h2>目录</h2>
+        <ul>
+          <li><a href="index.html">全部作品</a></li>
+          <li><a href="about.html">版权与图片来源</a></li>
+          <li><a href="about.html#sources">可用图源清单</a></li>
+          <li><a href="about.html#contact">错误与侵权告知</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>主要来源</h2>
+        <ul>
+          <li><a href="https://www.metmuseum.org/art/collection" target="_blank" rel="noopener noreferrer">The Met Open Access</a></li>
+          <li><a href="https://data.rijksmuseum.nl" target="_blank" rel="noopener noreferrer">Rijksmuseum Data Services</a></li>
+          <li><a href="https://www.getty.edu/projects/open-content-program/" target="_blank" rel="noopener noreferrer">Getty Open Content</a></li>
+          <li><a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener noreferrer">CC0 1.0 公有领域贡献</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer__base">
+      <span>本站为学习用途整理，非权威版本，不作为学术引用来源。</span>
+      <span>最后更新：<time class="num" datetime="2026-09-18">2026-09-18</time></span>
+    </div>
+  </div>
+</footer>
+
+<noscript>
+  <div class="wrap" style="padding-block:2rem">
+    <p>本站的目录与时间线需要 JavaScript 才能生成。你也可以直接访问各幅作品的页面，例如 <code>work.html?id=435809</code>。</p>
+  </div>
+</noscript>
+
+<script src="assets/js/works-data.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

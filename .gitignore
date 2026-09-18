@@ -1,0 +1,15 @@
+# 构建中间产物
+data/originals/
+data/fetch.log
+data/build.log
+
+# 调研过程的临时抓取
+.research/
+research/
+bgh_museumsfotos.html
+*.tmp
+
+# 系统
+.DS_Store
+Thumbs.db
+.gstack/

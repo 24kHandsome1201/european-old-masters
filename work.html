@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>作品导览 | 古画</title>
+<meta name="description" content="欧洲古典绘画作品的高清图与中文导览，含画家、年代、材质、尺寸、收藏地与图片授权信息。">
+<meta name="color-scheme" content="light">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Archivo:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main-content">跳到主要内容</a>
+
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="brand" href="index.html">
+      <span class="brand__zh">古画</span>
+      <span class="brand__en">European Old Masters</span>
+    </a>
+    <nav class="site-nav" aria-label="主导航">
+      <a href="index.html">目录</a>
+      <a href="about.html">版权与来源</a>
+    </nav>
+    <div class="source-toggle" data-source-toggle role="group" aria-label="图片加载方式">
+      <button type="button" data-mode="local" aria-pressed="true">本地图</button>
+      <button type="button" data-mode="remote" aria-pressed="false">馆方在线图</button>
+    </div>
+  </div>
+</header>
+
+<main id="main-content">
+  <div class="work wrap">
+    <a class="backlink" href="index.html">
+      <svg width="13" height="13" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+        <path d="M9.5 3.5L5 8l4.5 4.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      回到目录
+    </a>
+    <div data-work></div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="site-footer__grid">
+      <div>
+        <h2>关于本站</h2>
+        <p class="site-footer__note">一个个人非营利的欧洲古典绘画学习项目。不投放广告，不接受赞助，不销售任何商品或服务。站内画作的原作者均已去世数百年，作品本身属公有领域；数字图片来自博物馆以 CC0 方式发布的开放数据。</p>
+      </div>
+      <div>
+        <h2>目录</h2>
+        <ul>
+          <li><a href="index.html">全部作品</a></li>
+          <li><a href="about.html">版权与图片来源</a></li>
+          <li><a href="about.html#sources">可用图源清单</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>主要来源</h2>
+        <ul>
+          <li><a href="https://www.metmuseum.org/art/collection" target="_blank" rel="noopener noreferrer">The Met Open Access</a></li>
+          <li><a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener noreferrer">CC0 1.0 公有领域贡献</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer__base">
+      <span>本站为学习用途整理，非权威版本，不作为学术引用来源。</span>
+      <span>最后更新：<time class="num" datetime="2026-09-18">2026-09-18</time></span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/works-data.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
